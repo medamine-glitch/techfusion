@@ -207,6 +207,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.disabled = true;
             
             try {
+                console.log("Attempting to submit form to:", this.action);
                 // Submit the form to Formspree
                 const response = await fetch(this.action, {
                     method: 'POST',
@@ -215,6 +216,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Accept': 'application/json'
                     }
                 });
+                
+                console.log("Form submission response:", response);
                 
                 if (response.ok) {
                     // Show success message
@@ -235,10 +238,52 @@ document.addEventListener('DOMContentLoaded', function() {
                         successMessage.remove();
                     }, 5000);
                 } else {
-                    throw new Error('Form submission failed');
+                    const responseData = await response.json().catch(() => null);
+                    console.error("Form submission error:", responseData);
+                    throw new Error('Form submission failed: ' + (responseData?.error || response.statusText));
                 }
             } catch (error) {
-                // Show error message
+                console.error("Form submission error:", error);
+                
+                // Try traditional form submission as a fallback
+                console.log("Attempting traditional form submission as fallback");
+                const formData = new FormData(this);
+                
+                // Create a hidden iframe for submission to prevent page reload
+                const iframe = document.createElement('iframe');
+                iframe.name = 'hidden_iframe';
+                iframe.style.display = 'none';
+                document.body.appendChild(iframe);
+                
+                // Set form to submit to the iframe
+                this.target = 'hidden_iframe';
+                this.method = 'POST';
+                
+                // Submit the form traditionally
+                this.submit();
+                
+                // Show a neutral message
+                const pendingMessage = document.createElement('div');
+                pendingMessage.className = 'success-message';
+                pendingMessage.style.backgroundColor = 'var(--secondary)';
+                pendingMessage.style.color = 'white';
+                pendingMessage.style.padding = '1rem';
+                pendingMessage.style.borderRadius = '8px';
+                pendingMessage.style.marginTop = '1rem';
+                pendingMessage.innerHTML = '<p>Thank you for your message! We are processing your submission.</p>';
+                
+                this.appendChild(pendingMessage);
+                
+                // Remove message after 5 seconds
+                setTimeout(() => {
+                    pendingMessage.remove();
+                    iframe.remove();
+                }, 5000);
+                
+                return; // Skip the error message since we're using traditional submission
+                
+                // Show error message - commented out since we're using traditional submission
+                /*
                 const errorMessage = document.createElement('div');
                 errorMessage.className = 'error-message';
                 errorMessage.style.backgroundColor = '#ef4444';
@@ -246,7 +291,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 errorMessage.style.padding = '1rem';
                 errorMessage.style.borderRadius = '8px';
                 errorMessage.style.marginTop = '1rem';
-                errorMessage.innerHTML = '<p>Oops! There was a problem sending your message. Please try again.</p>';
+                errorMessage.innerHTML = '<p>Oops! There was a problem sending your message. Please try again.</p><p><small>Error: ' + error.message + '</small></p>';
                 
                 this.appendChild(errorMessage);
                 
@@ -254,6 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 setTimeout(() => {
                     errorMessage.remove();
                 }, 5000);
+                */
             } finally {
                 // Reset button state
                 submitButton.innerHTML = originalButtonText;

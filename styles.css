@@ -334,10 +334,7 @@ section {
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
     
-    .navbar-menu.active ~ .navbar-container .navbar-toggle {
-        opacity: 0;
-        visibility: hidden;
-    }
+        .navbar-menu.active ~ .navbar-container .navbar-toggle,    .navbar-menu.active + .navbar-container .navbar-toggle,    .navbar-menu.active ~ .navbar-toggle,    .navbar-menu.active + .navbar-toggle {        opacity: 0 !important;        visibility: hidden !important;    }
     
     .navbar-close {
         display: block !important;

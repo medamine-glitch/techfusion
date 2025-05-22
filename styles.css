@@ -294,98 +294,130 @@ section {
 
 /* Mobile Navigation Styles */
 @media screen and (max-width: 768px) {
+    section {
+        padding: 4rem 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+        min-height: auto;
+        padding-bottom: 2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-btns {
+        justify-content: center;
+    }
+
+    .hero-image {
+        position: relative;
+        width: 90%;
+        max-width: 500px;
+        margin: 2rem auto 0;
+        top: 0;
+        right: 0;
+        transform: none;
+    }
+
+    .hero-image img {
+        border-radius: 15px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr !important;
+        gap: 2rem;
+        direction: ltr !important;
+    }
+
+    .about-content .about-text {
+        direction: ltr !important;
+        order: 1;
+        padding: 0 1rem;
+    }
+
+    .about-content .about-image {
+        order: 2;
+        margin: 0 auto;
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .about-content .about-image img {
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 16px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .feature-item {
+        flex-direction: row;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .pricing-card.popular {
+        transform: scale(1);
+    }
+
     .navbar-menu {
         position: fixed;
         top: 0;
         right: -100%;
-        width: 80%;
-        max-width: 400px;
+        width: 70%;
         height: 100vh;
         background-color: var(--surface);
         flex-direction: column;
-        padding: 2rem;
-        transition: right 0.3s ease-in-out;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 5rem 2rem;
+        transition: right 0.3s;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
     }
-    
+
     .navbar-menu.active {
         right: 0;
     }
-    
+
     .navbar-item {
         margin: 1rem 0;
     }
-    
+
+    .theme-switch {
+        margin: 2rem 0 0;
+    }
+
     .navbar-toggle {
-        display: block !important;
-        position: relative;
+        display: block;
         z-index: 1001;
-        background: transparent;
-        border: none;
-        width: 40px;
-        height: 40px;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        color: var(--text);
-        font-size: 1.5rem;
-        cursor: pointer;
-        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
-    
-        .navbar-menu.active ~ .navbar-container .navbar-toggle,    .navbar-menu.active + .navbar-container .navbar-toggle,    .navbar-menu.active ~ .navbar-toggle,    .navbar-menu.active + .navbar-toggle {        opacity: 0 !important;        visibility: hidden !important;    }
-    
+
     .navbar-close {
-        display: block !important;
         position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: transparent;
-        border: none;
-        font-size: 1.5rem;
-        color: var(--text);
-        cursor: pointer;
-        padding: 0.5rem;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        display: flex !important;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease-in-out;
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .navbar-menu.active .navbar-close {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .navbar-close:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-        transform: rotate(90deg);
+        top: 1.5rem;
+        right: 1.5rem;
     }
 
-    /* Add overlay when menu is active */
-    .navbar::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease-in-out;
-        z-index: 999;
-    }
-
-    .navbar-menu.active + .navbar::before {
-        opacity: 1;
-        visibility: visible;
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
     }
 }
 
@@ -485,6 +517,14 @@ section {
     z-index: 0;
     transition: all 0.3s;
     margin-right: 10px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
 }
 
 /* ===== SERVICES SECTION ===== */
@@ -1098,6 +1138,8 @@ section {
 
     .hero-image {
         width: 40%;
+        right: 2%;
+        top: 25%;
     }
 
     .footer-grid {
@@ -1105,99 +1147,27 @@ section {
     }
 }
 
-@media screen and (max-width: 768px) {
-    section {
-        padding: 4rem 0;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 3rem;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-btns {
-        justify-content: center;
-    }
-
-    .hero-image {
-        position: relative;
-        width: 80%;
-        max-width: 400px;
-        margin: 0 auto;
-        top: 0;
-        transform: translateY(0);
-    }
-
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .pricing-card.popular {
-        transform: scale(1);
-    }
-
-    .navbar-menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 70%;
-        height: 100vh;
-        background-color: var(--surface);
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 5rem 2rem;
-        transition: right 0.3s;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .navbar-menu.active {
-        right: 0;
-    }
-
-    .navbar-item {
-        margin: 1rem 0;
-    }
-
-    .theme-switch {
-        margin: 2rem 0 0;
-    }
-
-    .navbar-toggle {
-        display: block;
-        z-index: 1001;
-    }
-
-    .navbar-close {
-        position: absolute;
-        top: 1.5rem;
-        right: 1.5rem;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 3rem;
-    }
-}
-
 @media screen and (max-width: 480px) {
+    .hero {
+        padding-top: 100px;
+    }
+
     .hero-title {
         font-size: 2rem;
     }
 
     .hero-description {
         font-size: 1rem;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin: 1rem auto 0;
+        padding: 0 1rem;
+    }
+
+    .hero-image img {
+        border-radius: 10px;
     }
 
     .hero-btns {
@@ -1214,11 +1184,45 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .about-content .about-text {
+        padding: 0;
+    }
+
+    .about-content .about-image {
+        padding: 0;
+    }
+
+    .feature-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .feature-icon {
+        margin: 0 auto;
+    }
+
+    .feature-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
     h1 {
         font-size: 2.5rem;
     }
 
     h2 {
         font-size: 2rem;
+    }
+
+    .section-title {
+        margin-bottom: 2rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.8rem;
     }
 }

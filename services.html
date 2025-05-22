@@ -18,13 +18,13 @@
             </button>
             <ul class="navbar-menu" id="navbar-menu">
                 <li class="navbar-item">
-                    <a href="index.html" class="navbar-link active">Home</a>
+                    <a href="index.html" class="navbar-link">Home</a>
                 </li>
                 <li class="navbar-item">
                     <a href="about.html" class="navbar-link">About</a>
                 </li>
-                 <li class="navbar-item">
-                    <a href="services.html" class="navbar-link">Services</a>
+                <li class="navbar-item">
+                    <a href="services.html" class="navbar-link active">Services</a>
                 </li>
                 <li class="navbar-item">
                     <a href="projects.html" class="navbar-link">Projects</a>
@@ -344,66 +344,6 @@
         </div>
     </footer>
 
-    <script>
-        // Toggle navbar menu
-        const navbarToggle = document.getElementById('navbar-toggle');
-        const navbarClose = document.getElementById('navbar-close');
-        const navbarMenu = document.getElementById('navbar-menu');
-
-        navbarToggle.addEventListener('click', () => {
-            navbarMenu.classList.add('active');
-        });
-
-        navbarClose.addEventListener('click', () => {
-            navbarMenu.classList.remove('active');
-        });
-
-        // Theme switcher
-        const themeSwitch = document.getElementById('theme-switch');
-        
-        // Check for saved theme preference or default to 'light'
-        const currentTheme = localStorage.getItem('theme') || 'light';
-        document.documentElement.setAttribute('data-theme', currentTheme);
-        
-        themeSwitch.addEventListener('click', () => {
-            let theme = document.documentElement.getAttribute('data-theme');
-            
-            if (theme === 'light') {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light');
-            }
-        });
-        
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-        
-        // Animation on scroll (simple implementation)
-        const animatedElements = document.querySelectorAll('.animate-fadeInUp');
-        
-        const checkInView = () => {
-            animatedElements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.style.opacity = '1';
-                    element.style.transform = 'translateY(0)';
-                }
-            });
-        };
-        
-        window.addEventListener('scroll', checkInView);
-        checkInView(); // Check on initial load
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

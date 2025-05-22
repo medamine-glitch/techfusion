@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TechFusion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="index.html" class="navbar-logo">Tech<span>Fusion</span></a>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="services.html" class="navbar-link">Services</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="projects.html" class="navbar-link">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html" class="navbar-link active">Contact</a>
+                </li>
+                <li class="navbar-item">
+                    <div class="theme-switch" id="theme-switch">
+                        <i class="fas fa-sun icon"></i>
+                        <i class="fas fa-moon icon"></i>
+                    </div>
+                </li>
+                <button class="navbar-close" id="navbar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 50vh; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">Get In <span>Touch</span></h1>
+                <p class="hero-description">Have a project in mind or want to learn more about our services? We'd love to hear from you.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" style="background-color: var(--background); padding: 5rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div class="animate-fadeInUp">
+                    <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+                    <div class="contact-info" style="margin-bottom: 3rem;">
+                        <div class="footer-contact" style="margin-bottom: 1.5rem;">
+                            <div class="footer-contact-icon" style="font-size: 1.5rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="footer-contact-text" style="font-size: 1.1rem;">
+                                123 Innovation Street<br>
+                                Tech City, TC 12345<br>
+                                United States
+                            </div>
+                        </div>
+                        <div class="footer-contact" style="margin-bottom: 1.5rem;">
+                            <div class="footer-contact-icon" style="font-size: 1.5rem;">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="footer-contact-text" style="font-size: 1.1rem;">
+                                +212 6
+                            </div>
+                        </div>
+                        <div class="footer-contact" style="margin-bottom: 1.5rem;">
+                            <div class="footer-contact-icon" style="font-size: 1.5rem;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="footer-contact-text" style="font-size: 1.1rem;">
+                                info@techfusion.com
+                            </div>
+                        </div>
+                        <div class="footer-contact">
+                            <div class="footer-contact-icon" style="font-size: 1.5rem;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="footer-contact-text" style="font-size: 1.1rem;">
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 2:00 PM<br>
+                                Sunday: Closed
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-bottom: 1.5rem;">Connect With Us</h3>
+                    <div class="footer-social" style="margin-bottom: 3rem;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                    
+                    <div class="map-container" style="height: 300px; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow);">
+                        <!-- Replace with actual map embed code -->
+                        <div style="background-color: #e9e9e9; height: 100%; display: flex; align-items: center; justify-content: center;">
+                            <p>Map Placeholder - Replace with Google Maps or other map service</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="animate-fadeInUp delay-2">
+                    <div class="card" style="height: 100%;">
+                        <div class="card-content">
+                            <h2 style="margin-bottom: 2rem;">Send Us a Message</h2>
+                            <form action="https://formspree.io/f/xanwopzj" method="POST" id="contact-form" class="contact-form">
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name</label>
+                                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background);">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
+                                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background);">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject</label>
+                                    <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background);">
+                                </div>
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
+                                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background); resize: vertical;"></textarea>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" required style="width: 18px; height: 18px;">
+                                        <span style="font-size: 0.9rem;">I agree to the privacy policy and terms of service</span>
+                                    </label>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item card animate-fadeInUp" style="margin-bottom: 1.5rem; cursor: pointer;">
+                    <div class="card-content">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin-bottom: 0;">What services do you offer?</h3>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer" style="display: none; margin-top: 1rem; color: var(--text-secondary);">
+                            <p>We offer a comprehensive range of digital services including AI solutions, SaaS development, web application development, UI/UX design, and digital strategy consulting. Our team specializes in creating custom solutions tailored to your specific business needs.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item card animate-fadeInUp delay-1" style="margin-bottom: 1.5rem; cursor: pointer;">
+                    <div class="card-content">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin-bottom: 0;">How much does a typical project cost?</h3>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer" style="display: none; margin-top: 1rem; color: var(--text-secondary);">
+                            <p>Project costs vary depending on the scope, complexity, and timeline. We work with clients to understand their requirements and budget constraints to provide customized solutions. Contact us for a free consultation and quote tailored to your specific project.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item card animate-fadeInUp delay-2" style="margin-bottom: 1.5rem; cursor: pointer;">
+                    <div class="card-content">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin-bottom: 0;">What is your development process?</h3>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer" style="display: none; margin-top: 1rem; color: var(--text-secondary);">
+                            <p>We follow an agile development methodology that includes discovery, planning, design, development, testing, deployment, and ongoing support. We maintain transparent communication throughout the process and involve clients at every stage to ensure the final product meets their expectations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item card animate-fadeInUp delay-3" style="margin-bottom: 1.5rem; cursor: pointer;">
+                    <div class="card-content">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin-bottom: 0;">How long does a typical project take?</h3>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer" style="display: none; margin-top: 1rem; color: var(--text-secondary);">
+                            <p>Project timelines depend on the complexity and scope. Simple websites might take 4-6 weeks, while complex SaaS applications or AI solutions can take 3-6 months or more. We'll provide a detailed timeline during the project planning phase after understanding your specific requirements.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item card animate-fadeInUp delay-4" style="margin-bottom: 1.5rem; cursor: pointer;">
+                    <div class="card-content">
+                        <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">
+                            <h3 style="margin-bottom: 0;">Do you provide ongoing support?</h3>
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer" style="display: none; margin-top: 1rem; color: var(--text-secondary);">
+                            <p>Yes, we offer various support and maintenance packages to ensure your solution continues to run smoothly after launch. These can include regular updates, security patches, performance optimization, and feature enhancements based on your evolving needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Tech<span>Fusion</span></div>
+                    <p class="footer-text">We create innovative digital solutions that help businesses thrive in the modern world. Our expertise in AI, SaaS, and web development enables us to deliver exceptional results.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="projects.html">Projects</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">AI Solutions</a></li>
+                        <li class="footer-link"><a href="#">SaaS Development</a></li>
+                        <li class="footer-link"><a href="#">Web Development</a></li>
+                        <li class="footer-link"><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            123 Innovation Street, Tech City, TC 12345
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            +1 (555) 123-4567
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            info@techfusion.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechFusion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

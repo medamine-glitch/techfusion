@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services | Your Agency</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+   <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="index.html" class="navbar-logo">Tech<span>Fusion</span></a>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link active">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-link">About</a>
+                </li>
+                 <li class="navbar-item">
+                    <a href="services.html" class="navbar-link">Services</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="projects.html" class="navbar-link">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html" class="navbar-link">Contact</a>
+                </li>
+                <li class="navbar-item">
+                    <div class="theme-switch" id="theme-switch">
+                        <i class="fas fa-sun icon"></i>
+                        <i class="fas fa-moon icon"></i>
+                    </div>
+                </li>
+                <button class="navbar-close" id="navbar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero" style="min-height: 50vh;">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <span class="badge badge-primary">SERVICES</span>
+                <h1 class="hero-title">Our <span>Premium</span> Services</h1>
+                <p class="hero-description">
+                    Empowering businesses with cutting-edge solutions in AI, SaaS, and web development.
+                    Discover how our services can transform your digital presence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+            </div>
+            <div class="services-grid">
+                <!-- AI Services -->
+                <div class="card service-card animate-fadeInUp delay-1">
+                    <div class="card-content">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="service-title">Artificial Intelligence</h3>
+                        <p class="service-description">
+                            Harness the power of AI to automate processes, gain insights from data, and create intelligent applications that evolve with your business.
+                        </p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- SaaS Development -->
+                <div class="card service-card animate-fadeInUp delay-2">
+                    <div class="card-content">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="service-title">SaaS Development</h3>
+                        <p class="service-description">
+                            Build scalable, secure, and feature-rich software-as-a-service solutions that deliver consistent value to your customers.
+                        </p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="card service-card animate-fadeInUp delay-3">
+                    <div class="card-content">
+                        <div class="service-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">
+                            Create stunning, responsive, and high-performance websites that provide exceptional user experiences and drive conversions.
+                        </p>
+                        <a href="#" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Details Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>AI Development Services</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="badge badge-primary">INNOVATION</span>
+                    <h3>Custom AI Solutions</h3>
+                    <p>
+                        Our team specializes in developing tailored AI solutions that address your unique business challenges. From predictive analytics to computer vision and natural language processing, we build intelligent systems that drive efficiency and create competitive advantages.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Machine Learning</h3>
+                                <p>Custom algorithms and models trained on your data to deliver actionable insights and predictions.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Conversational AI</h3>
+                                <p>Intelligent chatbots and virtual assistants that enhance customer experiences and automate support.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/solutions.jpg" alt="AI Solutions">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>SaaS Development</h2>
+            </div>
+            <div class="about-content" style="grid-template-columns: 1fr 1fr; direction: rtl;">
+                <div class="about-text" style="direction: ltr;">
+                    <span class="badge badge-secondary">SCALABILITY</span>
+                    <h3>Cloud-based Applications</h3>
+                    <p>
+                        Transform your business idea into a successful SaaS product with our end-to-end development services. We focus on creating scalable, secure, and user-friendly applications that deliver continuous value to your customers.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background-color: rgba(16, 185, 129, 0.1); color: var(--secondary);">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Rapid Deployment</h3>
+                                <p>Accelerate your time-to-market with our efficient development approach and continuous integration.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background-color: rgba(16, 185, 129, 0.1); color: var(--secondary);">
+                                <i class="fas fa-sync"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Subscription Management</h3>
+                                <p>Integrated billing systems and customer portals to manage subscriptions and payments.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/saas1.jpeg " alt="SaaS Solutions">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Web Development</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <span class="badge badge-accent">DESIGN</span>
+                    <h3>Custom Web Applications</h3>
+                    <p>
+                        We design and develop responsive, high-performance websites and web applications that provide seamless user experiences across all devices. Our development process focuses on creating solutions that are not only visually stunning but also optimized for conversions.
+                    </p>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background-color: rgba(139, 92, 246, 0.1); color: var(--accent);">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>Responsive Design</h3>
+                                <p>Websites that adapt perfectly to any screen size, ensuring optimal user experience.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon" style="background-color: rgba(139, 92, 246, 0.1); color: var(--accent);">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h3>SEO Optimization</h3>
+                                <p>Built-in search engine optimization to improve visibility and drive organic traffic.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="images/web.webp" alt="Web Development">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Development Process</h2>
+            </div>
+            <div class="services-grid">
+                <div class="card">
+                    <div class="card-content">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem;">01</div>
+                        <h3 class="service-title">Discovery & Strategy</h3>
+                        <p>We begin by understanding your business goals, target audience, and project requirements to develop a comprehensive strategy.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--secondary); margin-bottom: 1rem;">02</div>
+                        <h3 class="service-title">Design & Prototype</h3>
+                        <p>Our team creates wireframes and interactive prototypes to visualize the solution before development begins.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 1rem;">03</div>
+                        <h3 class="service-title">Development</h3>
+                        <p>Using agile methodologies, we build your solution with clean, maintainable code and regular client updates.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div style="font-size: 2.5rem; font-weight: 700; color: var(--primary); margin-bottom: 1rem;">04</div>
+                        <h3 class="service-title">Testing & Launch</h3>
+                        <p>Rigorous quality assurance ensures your product is bug-free and performs optimally before deployment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="cta-shape"></div>
+        <div class="cta-shape"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Schedule a consultation with our experts to discuss your requirements and get a free quote.</p>
+                <a href="contact.html" class="btn btn-secondary">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-logo">Dev<span>Fusion</span></h3>
+                    <p class="footer-text">
+                        We help businesses transform their ideas into reality with cutting-edge technology solutions in AI, SaaS, and web development.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">AI Development</a></li>
+                        <li class="footer-link"><a href="#">SaaS Applications</a></li>
+                        <li class="footer-link"><a href="#">Web Development</a></li>
+                        <li class="footer-link"><a href="#">UI/UX Design</a></li>
+                        <li class="footer-link"><a href="#">API Integration</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="projects.html">Our Work</a></li>
+                        <li class="footer-link"><a href="#">Careers</a></li>
+                        <li class="footer-link"><a href="#">Blog</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Contact Us</h4>
+                    <div class="footer-contact">
+                        <i class="fas fa-map-marker-alt footer-contact-icon"></i>
+                        <p class="footer-contact-text">123 Innovation Street, Tech City, CA 94107</p>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-phone footer-contact-icon"></i>
+                        <p class="footer-contact-text">+1 (555) 123-4567</p>
+                    </div>
+                    <div class="footer-contact">
+                        <i class="fas fa-envelope footer-contact-icon"></i>
+                        <p class="footer-contact-text">info@devfusion.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DevFusion. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle navbar menu
+        const navbarToggle = document.getElementById('navbar-toggle');
+        const navbarClose = document.getElementById('navbar-close');
+        const navbarMenu = document.getElementById('navbar-menu');
+
+        navbarToggle.addEventListener('click', () => {
+            navbarMenu.classList.add('active');
+        });
+
+        navbarClose.addEventListener('click', () => {
+            navbarMenu.classList.remove('active');
+        });
+
+        // Theme switcher
+        const themeSwitch = document.getElementById('theme-switch');
+        
+        // Check for saved theme preference or default to 'light'
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        
+        themeSwitch.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            
+            if (theme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+        
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        
+        // Animation on scroll (simple implementation)
+        const animatedElements = document.querySelectorAll('.animate-fadeInUp');
+        
+        const checkInView = () => {
+            animatedElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        window.addEventListener('scroll', checkInView);
+        checkInView(); // Check on initial load
+    </script>
+</body>
+</html>

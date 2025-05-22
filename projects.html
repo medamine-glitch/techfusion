@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - TechFusion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="index.html" class="navbar-logo">Tech<span>Fusion</span></a>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item">
+                    <a href="index.html" class="navbar-link">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="about.html" class="navbar-link">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="services.html" class="navbar-link">Services</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="projects.html" class="navbar-link active">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="contact.html" class="navbar-link">Contact</a>
+                </li>
+                <li class="navbar-item">
+                    <div class="theme-switch" id="theme-switch">
+                        <i class="fas fa-sun icon"></i>
+                        <i class="fas fa-moon icon"></i>
+                    </div>
+                </li>
+                <button class="navbar-close" id="navbar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 50vh; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">Our <span>Projects</span></h1>
+                <p class="hero-description">Explore our portfolio of innovative AI solutions, SaaS applications, and web development projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Filters -->
+    <section class="projects" style="padding-top: 0;">
+        <div class="container">
+            <div class="project-filters" style="display: flex; justify-content: center; margin-bottom: 3rem;">
+                <button class="btn btn-outline filter-btn active" data-filter="all">All</button>
+                <button class="btn btn-outline filter-btn" data-filter="ai">AI Solutions</button>
+                <button class="btn btn-outline filter-btn" data-filter="saas">SaaS</button>
+                <button class="btn btn-outline filter-btn" data-filter="web">Web Development</button>
+            </div>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- AI Projects -->        
+                <div class="card project-card animate-fadeInUp delay-1" data-category="ai">
+                    <div class="project-image">
+                        <img src="images/ai.png" alt="AI Chatbot Project">
+                        <div class="project-overlay">
+                            <a href="#project-modal-1" class="project-modal-trigger"><i class="fas fa-search"></i></a>
+                            <a href="https://one.abwabkom.store/index.html"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-primary">AI</span>
+                        <h3 class="project-title">Intelligent Customer Service Chatbot</h3>
+                        <p class="project-category">AI Solution</p>
+                        <p>An AI-powered chatbot that handles customer inquiries with natural language processing, reducing response times by 80%.</p>
+                    </div>
+                </div>
+                
+                <div class="card project-card animate-fadeInUp delay-2" data-category="ai">
+                    <div class="project-image">
+                        <img src="images/dashboard.png" alt="AI Analytics Dashboard">
+                        <div class="project-overlay">
+                            <a href="#project-modal-2" class="project-modal-trigger"><i class="fas fa-search"></i></a>
+                            <a href="https://v0-machine-learning-dashboard-eight.vercel.app/dashboard"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-primary">AI</span>
+                        <h3 class="project-title">Predictive Analytics Dashboard</h3>
+                        <p class="project-category">AI Solution</p>
+                        <p>A machine learning-powered analytics platform that predicts business trends and provides actionable insights.</p>
+                    </div>
+                </div>
+                
+                <!-- SaaS Projects -->
+                <div class="card project-card animate-fadeInUp delay-3" data-category="saas">
+                    <div class="project-image">
+                        <img src="images/saas.png" alt="SaaS Platform">
+                        <div class="project-overlay">
+                            <a href="#project-modal-3" class="project-modal-trigger"><i class="fas fa-search"></i></a>
+                            <a href="https://v0-two-tau.vercel.app/"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-secondary">SaaS</span>
+                        <h3 class="project-title">Project Management Platform</h3>
+                        <p class="project-category">SaaS Development</p>
+                        <p>A comprehensive project management solution with real-time collaboration features and automated workflows.</p>
+                    </div>
+                </div>
+                
+                <div class="card project-card animate-fadeInUp delay-4" data-category="saas">
+                    <div class="project-image">
+                        <img src="images/hr.png" alt="HR Management System">
+                        <div class="project-overlay">
+                            <a href="#project-modal-4" class="project-modal-trigger"><i class="fas fa-search"></i></a>
+                            <a href="https://v0-hr-management-system-opal.vercel.app/"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-secondary">SaaS</span>
+                        <h3 class="project-title">HR Management System</h3>
+                        <p class="project-category">SaaS Development</p>
+                        <p>A cloud-based HR platform that streamlines employee management, payroll, and performance reviews.</p>
+                    </div>
+                </div>
+                
+                <!-- Web Projects -->
+                <div class="card project-card animate-fadeInUp delay-5" data-category="web">
+                    <div class="project-image">
+                        <img src="images/ecom.png" alt="E-commerce Website">
+                        <div class="project-overlay">
+                            <a href="#project-modal-5" class="project-modal-trigger"><i class="fas fa-search"></i></a>
+                            <a href="https://medamine-glitch.github.io/real-estate/"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-accent">Web</span>
+                        <h3 class="project-title">E-commerce Platform</h3>
+                        <p class="project-category">Web Development</p>
+                        <p>A high-performance e-commerce website with advanced product filtering and payment processing.</p>
+                    </div>
+                </div>
+                
+                <div class="card project-card animate-fadeInUp delay-6" data-category="web">
+                    <div class="project-image">
+                        <img src="images/thumbnail.png" alt="Real Estate Website">
+                        <div class="project-overlay">
+                            <a href="#project-modal-6" class="project-modal-trigger"><i class="fas fa-search"></i></a>
+                            <a href="https://v0-real-estate-sage-tau.vercel.app/"><i class="fas fa-link"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <span class="badge badge-accent">Web</span>
+                        <h3 class="project-title">Real Estate Listing Platform</h3>
+                        <p class="project-category">Web Development</p>
+                        <p>A feature-rich real estate website with property search, virtual tours, and agent management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals (Hidden by default) -->
+    <div class="project-modal" id="project-modal-1">
+        <div class="project-modal-content">
+            <span class="project-modal-close">&times;</span>
+            <div class="project-modal-header">
+                <h2>Intelligent Customer Service Chatbot</h2>
+                <span class="badge badge-primary">AI Solution</span>
+            </div>
+            <div class="project-modal-body">
+                <img src="/placeholder.svg?height=400&width=800" alt="AI Chatbot Project" style="width: 100%; border-radius: 12px; margin-bottom: 2rem;">
+                <h3>Project Overview</h3>
+                <p>This AI-powered chatbot was developed for a leading e-commerce company to handle customer service inquiries. Using natural language processing and machine learning, the chatbot can understand customer questions, provide accurate responses, and escalate complex issues to human agents when necessary.</p>
+                
+                <h3>Challenges</h3>
+                <ul>
+                    <li>Processing and understanding a wide variety of customer inquiries</li>
+                    <li>Integrating with existing customer service systems</li>
+                    <li>Training the AI model with sufficient data to handle edge cases</li>
+                </ul>
+                
+                <h3>Solutions</h3>
+                <p>We implemented a hybrid approach combining rule-based responses with machine learning models. The system was trained on historical customer service data and continuously improves through feedback loops. We also developed a seamless handoff protocol for complex cases that require human intervention.</p>
+                
+                <h3>Results</h3>
+                <ul>
+                    <li>80% reduction in response time for common inquiries</li>
+                    <li>65% of customer questions successfully resolved without human intervention</li>
+                    <li>Customer satisfaction ratings improved by 25%</li>
+                    <li>Significant cost savings in customer service operations</li>
+                </ul>
+                
+                <h3>Technologies Used</h3>
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                    <span class="badge badge-primary">Natural Language Processing</span>
+                    <span class="badge badge-primary">Machine Learning</span>
+                    <span class="badge badge-primary">Python</span>
+                    <span class="badge badge-primary">TensorFlow</span>
+                    <span class="badge badge-primary">Node.js</span>
+                    <span class="badge badge-primary">React</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="cta-bg"></div>
+        <div class="cta-shape"></div>
+        <div class="cta-shape"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2>Have a Project in Mind?</h2>
+                <p>Let's discuss how we can help bring your vision to life with our expertise in AI, SaaS, and web development.</p>
+                <a href="contact.html" class="btn btn-secondary">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Tech<span>Fusion</span></div>
+                    <p class="footer-text">We create innovative digital solutions that help businesses thrive in the modern world. Our expertise in AI, SaaS, and web development enables us to deliver exceptional results.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="projects.html">Projects</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">AI Solutions</a></li>
+                        <li class="footer-link"><a href="#">SaaS Development</a></li>
+                        <li class="footer-link"><a href="#">Web Development</a></li>
+                        <li class="footer-link"><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            123 Innovation Street, Tech City, TC 12345
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            +1 (555) 123-4567
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            info@techfusion.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechFusion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

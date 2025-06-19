@@ -33,18 +33,64 @@ document.addEventListener('DOMContentLoaded', function() {
     const navbarToggle = document.getElementById('navbar-toggle');
     const navbarMenu = document.getElementById('navbar-menu');
     const navbarClose = document.getElementById('navbar-close');
+    const navbarOverlay = document.getElementById('navbar-overlay');
+    
+    function toggleMenu(show) {
+        if (show) {
+            navbarMenu.classList.add('active');
+            navbarOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Hide hamburger button with a slight delay
+            setTimeout(() => {
+                navbarToggle.style.opacity = '0';
+                navbarToggle.style.visibility = 'hidden';
+            }, 100);
+        } else {
+            navbarMenu.classList.remove('active');
+            navbarOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+            // Show hamburger button immediately
+            navbarToggle.style.opacity = '1';
+            navbarToggle.style.visibility = 'visible';
+        }
+    }
     
     if (navbarToggle && navbarMenu) {
-        navbarToggle.addEventListener('click', function() {
-            navbarMenu.classList.add('active');
+        navbarToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = navbarMenu.classList.contains('active');
+            toggleMenu(!isActive);
         });
     }
     
     if (navbarClose && navbarMenu) {
-        navbarClose.addEventListener('click', function() {
-            navbarMenu.classList.remove('active');
+        navbarClose.addEventListener('click', function(e) {
+            e.stopPropagation();
+            toggleMenu(false);
         });
     }
+    
+    if (navbarOverlay) {
+        navbarOverlay.addEventListener('click', function() {
+            toggleMenu(false);
+        });
+    }
+    
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navbarMenu && navbarMenu.classList.contains('active')) {
+            if (!navbarMenu.contains(e.target) && !navbarToggle.contains(e.target)) {
+                toggleMenu(false);
+            }
+        }
+    });
+    
+    // Close mobile menu when pressing escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navbarMenu && navbarMenu.classList.contains('active')) {
+            toggleMenu(false);
+        }
+    });
     
     // Navbar Scroll Effect
     const navbar = document.querySelector('.navbar');

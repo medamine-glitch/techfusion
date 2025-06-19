@@ -7,168 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        /* Additional responsive styles for contact page */
-        @media screen and (max-width: 768px) {
-            .contact .container > div {
-                grid-template-columns: 1fr !important;
-                gap: 2rem !important;
-            }
-            
-            .contact-info {
-                margin-bottom: 2rem !important;
-            }
-            
-            .map-container {
-                height: 250px !important;
-            }
-            
-            .faq-container {
-                padding: 0 1rem;
-            }
-        }
-        
-        @media screen and (max-width: 480px) {
-            .hero-title {
-                font-size: 2.5rem !important;
-            }
-            
-            .contact {
-                padding: 3rem 0 !important;
-            }
-            
-            .form-group {
-                margin-bottom: 1rem !important;
-            }
-            
-            .footer-contact-text {
-                font-size: 1rem !important;
-            }
-        }
-        
-        /* Improve form responsiveness */
-        .contact-form input,
-        .contact-form textarea {
-            font-size: 16px !important; /* Prevents zoom on mobile */
-            max-width: 100% !important;
-            width: 100% !important;
-        }
-        
-        /* Improve card responsiveness */
-        .card {
-            height: auto !important;
-            min-height: 100%;
-        }
-        
-        /* Improve FAQ responsiveness */
-        .faq-question h3 {
-            font-size: 1.1rem;
-            padding-right: 2rem;
-        }
-        
-        /* Navbar Mobile Styles */
-        @media screen and (max-width: 768px) {
-            .navbar-menu {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                max-width: 400px;
-                height: 100vh;
-                background-color: var(--surface);
-                flex-direction: column;
-                padding: 2rem;
-                transition: right 0.3s ease-in-out;
-                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-            }
-            
-            .navbar-menu.active {
-                right: 0;
-            }
-            
-            .navbar-item {
-                margin: 1rem 0;
-            }
-            
-            .navbar-toggle {
-                display: block !important;
-                position: relative;
-                z-index: 1001;
-                background: transparent;
-                border: none;
-                width: 40px;
-                height: 40px;
-                display: flex !important;
-                align-items: center;
-                justify-content: center;
-                color: var(--text);
-                font-size: 1.5rem;
-                cursor: pointer;
-                transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-            }
-            
-            .navbar-menu.active ~ .navbar-container .navbar-toggle {
-                opacity: 0;
-                visibility: hidden;
-            }
-            
-            .navbar-close {
-                display: block !important;
-                position: absolute;
-                top: 1rem;
-                right: 1rem;
-                background: transparent;
-                border: none;
-                font-size: 1.5rem;
-                color: var(--text);
-                cursor: pointer;
-                padding: 0.5rem;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                display: flex !important;
-                align-items: center;
-                justify-content: center;
-                transition: background-color 0.3s;
-                opacity: 0;
-                visibility: hidden;
-            }
-            
-            .navbar-menu.active .navbar-close {
-                opacity: 1;
-                visibility: visible;
-            }
-            
-            .navbar-close:hover {
-                background-color: rgba(0, 0, 0, 0.1);
-            }
-            
-            .theme-switch {
-                margin: 1rem 0;
-            }
-
-            /* Add overlay when menu is active */
-            .navbar::before {
-                content: '';
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                opacity: 0;
-                visibility: hidden;
-                transition: all 0.3s ease-in-out;
-                z-index: 999;
-            }
-
-            .navbar-menu.active + .navbar::before {
-                opacity: 1;
-                visibility: visible;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -178,7 +16,7 @@
             <button class="navbar-toggle" id="navbar-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="navbar-menu" id="navbar-menu">
+            <ul class="navbar-menu" id="navbar-menu">   
                 <li class="navbar-item">
                     <a href="index.html" class="navbar-link">Home</a>
                 </li>
@@ -190,6 +28,9 @@
                 </li>
                 <li class="navbar-item">
                     <a href="projects.html" class="navbar-link">Projects</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="blogs.html" class="navbar-link">Blogs</a>
                 </li>
                 <li class="navbar-item">
                     <a href="contact.html" class="navbar-link active">Contact</a>
@@ -217,7 +58,13 @@
         </div>
     </section>
 
-        <!-- Contact Section -->    <section class="contact" style="background-color: var(--background); padding: 5rem 0;">        <div class="container">            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">                <div class="animate-fadeInUp">                    <h2 style="margin-bottom: 2rem;">Contact Information</h2>                    <div class="contact-info" style="margin-bottom: 3rem; max-width: 100%;">
+    <!-- Contact Section -->
+    <section class="contact" style="background-color: var(--background); padding: 5rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
+                <div class="animate-fadeInUp">
+                    <h2 style="margin-bottom: 2rem;">Contact Information</h2>
+                    <div class="contact-info" style="margin-bottom: 3rem;">
                         <div class="footer-contact" style="margin-bottom: 1.5rem;">
                             <div class="footer-contact-icon" style="font-size: 1.5rem;">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -278,28 +125,28 @@
                         <div class="card-content">
                             <h2 style="margin-bottom: 2rem;">Send Us a Message</h2>
                             <form action="https://formspree.io/f/xanwopzj" method="POST" id="contact-form" class="contact-form">
-                                <!-- Honeypot field to prevent spam -->
-                                <div style="display: none;">
-                                    <input type="text" name="_gotcha" style="display:none">
-                                </div>
                                 <div class="form-group" style="margin-bottom: 1.5rem;">
                                     <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Your Name</label>
-                                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;color: var(--text-secondary); background-color: var(--background);">
+                                    <input type="text" id="name" name="name" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background);">
                                 </div>
                                 <div class="form-group" style="margin-bottom: 1.5rem;">
                                     <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email Address</label>
-                                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; color: var(--text-secondary) ;background-color: var(--background);">
+                                    <input type="email" id="email" name="email" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background);">
                                 </div>
                                 <div class="form-group" style="margin-bottom: 1.5rem;">
                                     <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Subject</label>
-                                    <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;color: var(--text-secondary); background-color: var(--background);">
+                                    <input type="text" id="subject" name="subject" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background);">
                                 </div>
                                 <div class="form-group" style="margin-bottom: 1.5rem;">
                                     <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message</label>
-                                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc;color: var(--text-secondary); background-color: var(--background); resize: vertical;"></textarea>
+                                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #ccc; background-color: var(--background); resize: vertical;"></textarea>
                                 </div>
-                                <!-- Redirect after submission -->
-                                <input type="hidden" name="_next" value="https://yourdomain.com/thank-you">
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                        <input type="checkbox" required style="width: 18px; height: 18px;">
+                                        <span style="font-size: 0.9rem;">I agree to the privacy policy and terms of service</span>
+                                    </label>
+                                </div>
                                 <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                             </form>
                         </div>
@@ -309,7 +156,13 @@
         </div>
     </section>
 
-        <!-- FAQ Section -->    <section class="features">        <div class="container">            <div class="section-title">                <h2>Frequently Asked Questions</h2>            </div>            <div class="faq-container" style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+    <!-- FAQ Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
                 <div class="faq-item card animate-fadeInUp" style="margin-bottom: 1.5rem; cursor: pointer;">
                     <div class="card-content">
                         <div class="faq-question" style="display: flex; justify-content: space-between; align-items: center;">

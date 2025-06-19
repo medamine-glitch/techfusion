@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - TechFusion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <a href="index.html" class="navbar-logo">Tech<span>Fusion</span></a>
+            <button class="navbar-toggle" id="navbar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="navbar-menu" id="navbar-menu">
+                <li class="navbar-item"><a href="index.html" class="navbar-link">Home</a></li>
+                <li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+                <li class="navbar-item"><a href="services.html" class="navbar-link">Services</a></li>
+                <li class="navbar-item"><a href="projects.html" class="navbar-link">Projects</a></li>
+                <li class="navbar-item"><a href="blogs.html" class="navbar-link active">Blogs</a></li>
+                <li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+                <li class="navbar-item">
+                    <div class="theme-switch" id="theme-switch">
+                        <i class="fas fa-sun icon"></i>
+                        <i class="fas fa-moon icon"></i>
+                    </div>
+                </li>
+                <button class="navbar-close" id="navbar-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Blogs Header -->
+    <section class="hero" style="min-height: 40vh; padding-bottom: 2rem;">
+        <div class="container">
+            <div class="hero-content animate-fadeInUp">
+                <h1 class="hero-title">Latest in <span>Web Development</span></h1>
+                <p class="hero-description">Stay updated with the newest trends, technologies, and best practices in website development, AI, SaaS, and digital innovation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="blogs" style="background-color: var(--background); padding: 5rem 0;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Web Development News & Insights</h2>
+            </div>
+            <div class="blogs-grid">
+                <article class="card animate-fadeInUp" style="margin-bottom: 2rem;">
+                    <div class="card-content">
+                        <h3 class="service-title">The Rise of AI in Web Development</h3>
+                        <p class="service-description">Artificial Intelligence is transforming how websites are built and experienced. From AI-powered chatbots to intelligent content personalization, modern websites leverage machine learning to deliver smarter, more engaging user experiences. Tools like OpenAI, TensorFlow, and GPT models are now part of the developer's toolkit, enabling automation, advanced analytics, and conversational interfaces.</p>
+                    </div>
+                </article>
+                <article class="card animate-fadeInUp delay-1" style="margin-bottom: 2rem;">
+                    <div class="card-content">
+                        <h3 class="service-title">SaaS: The Future of Scalable Web Solutions</h3>
+                        <p class="service-description">Software as a Service (SaaS) continues to dominate the web development landscape. Businesses are moving away from traditional software to cloud-based, subscription-driven platforms. This shift enables rapid deployment, lower costs, and seamless updates. Modern SaaS products focus on user experience, security, and integration with other digital tools.</p>
+                    </div>
+                </article>
+                <article class="card animate-fadeInUp delay-2" style="margin-bottom: 2rem;">
+                    <div class="card-content">
+                        <h3 class="service-title">Web Performance & Core Web Vitals</h3>
+                        <p class="service-description">Google's Core Web Vitals have made website speed, responsiveness, and visual stability more important than ever. Developers are adopting new frameworks (like Next.js, Astro, and SvelteKit) and optimization techniques (lazy loading, code splitting, image optimization) to ensure top performance and better SEO rankings.</p>
+                    </div>
+                </article>
+                <article class="card animate-fadeInUp delay-3" style="margin-bottom: 2rem;">
+                    <div class="card-content">
+                        <h3 class="service-title">The Move to Headless CMS & Jamstack</h3>
+                        <p class="service-description">Headless CMS solutions (like Strapi, Contentful, and Sanity) and the Jamstack architecture are revolutionizing content management and site deployment. This approach separates the frontend from the backend, allowing for faster, more secure, and highly scalable websites.</p>
+                    </div>
+                </article>
+                <article class="card animate-fadeInUp delay-4" style="margin-bottom: 2rem;">
+                    <div class="card-content">
+                        <h3 class="service-title">Accessibility & Inclusive Design</h3>
+                        <p class="service-description">Modern web development emphasizes accessibility and inclusivity. Developers are adopting WCAG standards, semantic HTML, and ARIA roles to ensure websites are usable by everyone, including people with disabilities. This not only broadens your audience but also improves SEO and user satisfaction.</p>
+                    </div>
+                </article>
+                <article class="card animate-fadeInUp delay-5" style="margin-bottom: 2rem;">
+                    <div class="card-content">
+                        <h3 class="service-title">Security in the Age of Digital Transformation</h3>
+                        <p class="service-description">With the rise of cyber threats, web security is a top priority. HTTPS, Content Security Policy (CSP), regular vulnerability scanning, and secure authentication methods are now standard practices. Developers must stay vigilant and keep up with the latest security trends to protect users and data.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">Tech<span>Fusion</span></div>
+                    <p class="footer-text">We create innovative digital solutions that help businesses thrive in the modern world. Our expertise in AI, SaaS, and web development enables us to deliver exceptional results.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="index.html">Home</a></li>
+                        <li class="footer-link"><a href="about.html">About Us</a></li>
+                        <li class="footer-link"><a href="projects.html">Projects</a></li>
+                        <li class="footer-link"><a href="blogs.html">Blogs</a></li>
+                        <li class="footer-link"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Services</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#">AI Solutions</a></li>
+                        <li class="footer-link"><a href="#">SaaS Development</a></li>
+                        <li class="footer-link"><a href="#">Web Development</a></li>
+                        <li class="footer-link"><a href="#">UI/UX Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            123 Innovation Street, Tech City, TC 0632692024
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            +0632692024
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <div class="footer-contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="footer-contact-text">
+                            dompcy47@gmail.com
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechFusion. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
